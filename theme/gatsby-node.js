@@ -58,9 +58,9 @@ exports.onCreateNode = ({ node, actions }, options) => {
     // Using parse from Node path to get the directory of the file
     const { dir } = path.parse(fileNode.relativePath)
     const basePath = options.basePath || ''
-    const url = [basePath, dir, fileNode.name].filter(
-      name => name && name !== ''
-    )
+    const rootName = dir !== '' ? '' : '/'
+    const nodeName = fileNode.name === 'index' ? rootName : fileNode.name
+    const url = [basePath, dir, nodeName].filter(name => name && name !== '')
     return url.join('/')
   }
 
