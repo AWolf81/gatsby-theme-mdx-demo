@@ -17,13 +17,12 @@ exports.createPages = async ({ actions, graphql, reporter }, options) => {
 
   if (result.errors) {
     // Oh no
-    const files = fs.readdirSync(options.contentPath || 'docs')
+    const contentPath = options.contentPath || 'docs'
+    const files = fs.readdirSync(contentPath)
     if (!files.length) {
       // directory appears to be empty
       reporter.panic(
-        `Error! No MDX file found. Directory '${
-          options.contentPath
-        }' is empty. You need to add your fist .mdx file.`,
+        `Error! No MDX file found. Directory '${contentPath}' is empty. You need to add your fist .mdx file.`,
         result.errors
       )
     }
