@@ -5,6 +5,7 @@
     "theme"
   ],
   "scripts": {
+    "start": "yarn workspace demo develop",
     "lint": "eslint .",
     "precommit": "cross-env NODE_ENV=production lint-staged"
   },
