@@ -2,9 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const mkdirp = require('mkdirp')
 
-exports.createPages = async (
-  { actions, graphql, reporter } /* , options */
-) => {
+exports.createPages = async ({ actions, graphql, reporter }, options) => {
   const result = await graphql(`
     query {
       allFile {
@@ -19,7 +17,17 @@ exports.createPages = async (
 
   if (result.errors) {
     // Oh no
-    reporter.panic('Error loading mdx files', result.errors)
+    const files = fs.readdirSync(options.contentPath)
+    if (!files.length) {
+      // directory appears to be empty
+      reporter.panic(
+        `Error! No MDX file found. Directory '${
+          options.contentPath
+        }' is empty. You need to add your fist .mdx file.`,
+        result.errors
+      )
+    }
+    reporter.panic('Error! Loading mdx files', result.errors)
   }
 
   result.data.allFile.nodes.forEach(node => {
