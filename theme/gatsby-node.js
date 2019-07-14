@@ -17,7 +17,7 @@ exports.createPages = async ({ actions, graphql, reporter }, options) => {
 
   if (result.errors) {
     // Oh no
-    const files = fs.readdirSync(options.contentPath)
+    const files = fs.readdirSync(options.contentPath || 'docs')
     if (!files.length) {
       // directory appears to be empty
       reporter.panic(
