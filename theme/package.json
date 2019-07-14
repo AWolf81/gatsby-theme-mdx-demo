@@ -3,7 +3,7 @@
   "author": "Alexander Wolf <awolf2904@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/awolf81/gatsby-theme-mdx"
+    "url": "https://github.com/awolf81/gatsby-theme-mdx-demo"
   },
   "version": "0.0.1",
   "main": "index.js",
