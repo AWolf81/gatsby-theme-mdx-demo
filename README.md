@@ -7,4 +7,4 @@ You can read more about the project in my blog https://blog.alexanderwolf.tech/h
 - Clone the repo
 - Run `yarn` to install dependencies
 - Run `yarn workspace demo devlop` to start dev. server
-- Open browser at `localhost:8000/accessibility`
+- Open browser at `localhost:8000`
