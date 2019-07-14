@@ -1,0 +1,28 @@
+{
+  "name": "@awolf81/gatsby-theme-mdx",
+  "author": "Alexander Wolf <awolf2904@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awolf81/gatsby-theme-mdx"
+  },
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin"
+  ],
+  "peerDependencies": {
+    "gatsby": "^2.13.13",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.0.27",
+    "@mdx-js/react": "^1.0.27",
+    "gatsby-plugin-mdx": "^1.0.13",
+    "gatsby-source-filesystem": "^2.1.5",
+    "mkdirp": "^0.5.1"
+  }
+}
