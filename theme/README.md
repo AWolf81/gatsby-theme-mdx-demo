@@ -30,5 +30,9 @@ Run `gatsby develop` and add your first MDX file to the created `docs` folder. `
 
 # Options
 
-`basePath` the url where your MDX files are served
-`contentPath` the directory that will be created by the Theme. That's the location of your MDX files on disk.
+<dl>
+  <dt>basePath</dt>
+  <dd>The url where your MDX files are served</dd>
+  <dt>contentPath</dt>
+  <dd>The directory that will be created by the Theme. That's the location of your MDX files on disk.</dd>
+</dl>
