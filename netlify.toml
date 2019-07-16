@@ -1,7 +1,0 @@
-[Build]
-  Publish = "demo-basic/public/"
-  command = "yarn workspace demo-basic build"
-  Functions = ""
-
-[Build.environment]
-  NODE_ENV = "PRODUCTION"
