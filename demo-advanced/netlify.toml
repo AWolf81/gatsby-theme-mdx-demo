@@ -1,0 +1,8 @@
+[Build]
+  Base = "demo-advanced"
+  Publish = "public/"
+  command = "yarn build"
+  Functions = ""
+
+[Build.environment]
+  NODE_ENV = "PRODUCTION"
