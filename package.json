@@ -6,7 +6,8 @@
     "theme"
   ],
   "scripts": {
-    "start": "yarn workspace demo develop",
+    "start:basic": "yarn workspace demo-basic develop",
+    "start:advanced": "yarn workspace demo-advanced develop",
     "lint": "eslint .",
     "precommit": "cross-env NODE_ENV=production lint-staged",
     "publish:theme": "yarn publish theme --access public"
